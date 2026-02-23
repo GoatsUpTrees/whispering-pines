@@ -6,7 +6,7 @@ const locations = [
     name: 'Oconto Farm',
     address: 'N6765 County Road S\nOconto, WI 54153',
     phone: '(920) 834-2823',
-    note: 'Full Christmas experience — choose & cut, tractor rides, holiday shop, shaking & baling.',
+    note: 'Full Christmas experience — choose and cut, tractor rides, holiday shop, shaking and baling.',
     featured: true,
   },
   {
@@ -20,11 +20,13 @@ const locations = [
 ];
 
 const hours = [
-  { period: 'Opening Weekend', days: 'Sat & Sun before Thanksgiving', time: '9am – 5pm' },
-  { period: 'Thanksgiving Weekend', days: 'Fri, Sat & Sun', time: '9am – 6pm' },
-  { period: 'Regular Season', days: 'Monday – Sunday', time: '10am – 5pm' },
-  { period: 'Weekends', days: 'Saturday & Sunday', time: '9am – 6pm' },
+  { period: 'Opening Weekend', days: 'Sat & Sun before Thanksgiving', time: '9am - 5pm' },
+  { period: 'Thanksgiving Weekend', days: 'Fri, Sat & Sun', time: '9am - 6pm' },
+  { period: 'Regular Season', days: 'Monday - Sunday', time: '10am - 5pm' },
+  { period: 'Weekends', days: 'Saturday & Sunday', time: '9am - 6pm' },
 ];
+
+const mapsUrl = 'https://maps.google.com/?q=N6765+County+Road+S+Oconto+WI+54153';
 
 export default function Visit() {
   return (
@@ -35,7 +37,7 @@ export default function Visit() {
           <p className="section-label">Plan Your Visit</p>
           <h2 className="section-title">Hours &amp; Locations</h2>
           <p className="section-subtitle">
-            We're open from mid-November through the holiday season.
+            We are open from mid-November through the holiday season.
             Check our Facebook page for the latest updates each year.
           </p>
         </div>
@@ -59,8 +61,8 @@ export default function Visit() {
               ))}
             </div>
             <p className="visit__hours-note">
-              📅 Season typically runs <strong>mid-November through December 24th</strong>.
-              Follow us on Facebook for exact open/close dates each year.
+              Season typically runs <strong>mid-November through December 24th</strong>.
+              Follow us on Facebook for exact open and close dates each year.
             </p>
           </div>
 
@@ -80,12 +82,12 @@ export default function Visit() {
                 <p className="location-card__note">{loc.note}</p>
                 {loc.featured && (
                   
-                    href="https://maps.google.com/?q=N6765+County+Road+S+Oconto+WI+54153"
+                    href={mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="location-card__map-btn"
                   >
-                    Get Directions →
+                    Get Directions
                   </a>
                 )}
               </div>
