@@ -43,6 +43,7 @@ export default function Gallery() {
   return (
     <section className="gallery" id="gallery">
       <div className="gallery__inner">
+
         <div className="gallery__header">
           <p className="section-label">The Farm</p>
           <h2 className="section-title">See It for Yourself</h2>
@@ -53,17 +54,13 @@ export default function Gallery() {
         </div>
 
         <div className="gallery__note">
-          📷 <em>Placeholder photos shown — replace with your own farm images before launch.</em>
+          📷 Placeholder photos shown — replace with your own farm images before launch.
         </div>
 
         <div className="gallery__grid">
           {photos.map(photo => (
             <div key={photo.id} className={`gallery__item gallery__item--${photo.span}`}>
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-              />
+              <img src={photo.src} alt={photo.alt} loading="lazy" />
               <div className="gallery__item-overlay" />
             </div>
           ))}
@@ -71,15 +68,11 @@ export default function Gallery() {
 
         <div className="gallery__cta">
           <p>Follow us for seasonal updates and behind-the-scenes farm life</p>
-          
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="gallery__fb-btn"
-          >
+          <a href="https://www.facebook.com" className="gallery__fb-btn">
             📘 Follow on Facebook
           </a>
         </div>
+
       </div>
     </section>
   );
