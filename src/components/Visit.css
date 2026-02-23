@@ -1,0 +1,253 @@
+.visit {
+  background: var(--snow);
+  padding: 6rem 1.5rem;
+}
+
+.visit__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visit__header {
+  margin-bottom: 3.5rem;
+}
+
+.visit__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+  align-items: start;
+}
+
+.visit__hours-card {
+  background: var(--pine);
+  border-radius: 20px;
+  padding: 2.5rem;
+  color: var(--cream);
+  height: 100%;
+}
+
+.visit__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.visit__card-icon {
+  font-size: 1.6rem;
+}
+
+.visit__card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cream);
+}
+
+.visit__hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(245, 237, 224, 0.1);
+  gap: 1rem;
+}
+
+.hours-row__period {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--cream);
+}
+
+.hours-row__days {
+  font-family: var(--font-accent);
+  font-size: 0.82rem;
+  color: rgba(245, 237, 224, 0.6);
+  margin-top: 0.15rem;
+}
+
+.hours-row__time {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--amber-light);
+  white-space: nowrap;
+}
+
+.visit__hours-note {
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: rgba(245, 237, 224, 0.65);
+  line-height: 1.6;
+  padding: 1rem;
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+}
+
+.visit__hours-note strong {
+  color: var(--amber-light);
+}
+
+.visit__locations {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.location-card {
+  background: var(--cream-warm);
+  border: 1.5px solid rgba(26, 58, 42, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: box-shadow 0.2s;
+}
+
+.location-card:hover {
+  box-shadow: 0 8px 30px rgba(26, 58, 42, 0.1);
+}
+
+.location-card--featured {
+  border-color: var(--pine);
+  border-width: 2px;
+}
+
+.location-card__tag {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.4rem;
+}
+
+.location-card__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--pine);
+  margin-bottom: 0.7rem;
+}
+
+.location-card__address {
+  font-style: normal;
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+}
+
+.location-card__phone {
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--pine-mid);
+  margin-bottom: 0.8rem;
+  transition: color 0.2s;
+}
+
+.location-card__phone:hover {
+  color: var(--amber);
+}
+
+.location-card__note {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.location-card__map-btn {
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--pine);
+  border: 1.5px solid var(--pine);
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.location-card__map-btn:hover {
+  background: var(--pine);
+  color: var(--cream);
+}
+
+.visit__highlights {
+  background: var(--cream-warm);
+  border: 1.5px solid rgba(26, 58, 42, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.25rem;
+}
+
+.highlight {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.highlight__icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.highlight strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--pine);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.highlight p {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.highlight__divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(26, 58, 42, 0.15);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .visit__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visit__highlights {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .highlight__divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+@media (max-width: 600px) {
+  .visit { padding: 4rem 1.25rem; }
+  .visit__hours-card { padding: 1.75rem; }
+  .visit__highlights { padding: 1.5rem; }
+}
