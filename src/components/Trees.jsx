@@ -46,4 +46,68 @@ export default function Trees() {
           <p className="section-label">Our Selection</p>
           <h2 className="section-title">Find Your Perfect Tree</h2>
           <p className="section-subtitle">
-            Wander our fields and hand-select a freshly-grow
+            Wander our fields and hand-select a freshly-grown tree — or browse our
+            large assortment of pre-cut trees at the lodge if you are short on time.
+          </p>
+        </div>
+
+        <div className="trees__grid">
+          {trees.map(tree => (
+            <article
+              key={tree.name}
+              className={`tree-card ${tree.featured ? 'tree-card--featured' : ''}`}
+              style={{ '--card-color': tree.color }}
+            >
+              {tree.featured && <span className="tree-card__badge">Most Popular</span>}
+              <div className="tree-card__icon">{tree.emoji}</div>
+              <h3 className="tree-card__name">{tree.name}</h3>
+              <p className="tree-card__tagline">{tree.tagline}</p>
+              <p className="tree-card__desc">{tree.description}</p>
+              <ul className="tree-card__traits">
+                {tree.traits.map(t => (
+                  <li key={t}><span>✓</span>{t}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="trees__services">
+          <div className="trees__services-text">
+            <p className="section-label">At the Lodge</p>
+            <h3 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>
+              Full Service, Start to Finish
+            </h3>
+            <p className="section-subtitle" style={{ marginTop: '0.75rem' }}>
+              After you pick your tree, we will shake out loose needles, bale it for easy
+              transport, and load it onto your vehicle — you do not lift a finger until
+              you are home decorating.
+            </p>
+          </div>
+          <div className="trees__services-icons">
+            <div className="service-pill">🪚 Tree Cutting</div>
+            <div className="service-pill">🔄 Shaking</div>
+            <div className="service-pill">📦 Baling</div>
+            <div className="service-pill">🚗 Loading</div>
+          </div>
+        </div>
+
+        <div className="trees__extras">
+          <p className="section-label" style={{ textAlign: 'center' }}>Holiday Shop</p>
+          <h3 className="section-title" style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            More Holiday Greenery
+          </h3>
+          <div className="extras__grid">
+            {extras.map(e => (
+              <div key={e.name} className="extra-card">
+                <div className="extra-card__icon">{e.icon}</div>
+                <h4>{e.name}</h4>
+                <p>{e.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
