@@ -4,7 +4,7 @@ const locations = [
   {
     tag: 'Main Farm',
     name: 'Oconto Farm',
-    address: 'N6765 County Road S\nOconto, WI 54153',
+    address: 'N6765 County Road S, Oconto, WI 54153',
     phone: '(920) 834-2823',
     note: 'Full Christmas experience — choose and cut, tractor rides, holiday shop, shaking and baling.',
     featured: true,
@@ -20,13 +20,11 @@ const locations = [
 ];
 
 const hours = [
-  { period: 'Opening Weekend', days: 'Sat & Sun before Thanksgiving', time: '9am - 5pm' },
-  { period: 'Thanksgiving Weekend', days: 'Fri, Sat & Sun', time: '9am - 6pm' },
+  { period: 'Opening Weekend', days: 'Sat and Sun before Thanksgiving', time: '9am - 5pm' },
+  { period: 'Thanksgiving Weekend', days: 'Fri, Sat and Sun', time: '9am - 6pm' },
   { period: 'Regular Season', days: 'Monday - Sunday', time: '10am - 5pm' },
-  { period: 'Weekends', days: 'Saturday & Sunday', time: '9am - 6pm' },
+  { period: 'Weekends', days: 'Saturday and Sunday', time: '9am - 6pm' },
 ];
-
-const mapsUrl = 'https://maps.google.com/?q=N6765+County+Road+S+Oconto+WI+54153';
 
 export default function Visit() {
   return (
@@ -35,7 +33,7 @@ export default function Visit() {
 
         <div className="visit__header">
           <p className="section-label">Plan Your Visit</p>
-          <h2 className="section-title">Hours &amp; Locations</h2>
+          <h2 className="section-title">Hours and Locations</h2>
           <p className="section-subtitle">
             We are open from mid-November through the holiday season.
             Check our Facebook page for the latest updates each year.
@@ -62,7 +60,7 @@ export default function Visit() {
             </div>
             <p className="visit__hours-note">
               Season typically runs <strong>mid-November through December 24th</strong>.
-              Follow us on Facebook for exact open and close dates each year.
+              Follow us on Facebook for exact dates each year.
             </p>
           </div>
 
@@ -71,22 +69,13 @@ export default function Visit() {
               <div key={loc.name} className={`location-card ${loc.featured ? 'location-card--featured' : ''}`}>
                 <div className="location-card__tag">{loc.tag}</div>
                 <h3 className="location-card__name">{loc.name}</h3>
-                <address className="location-card__address">
-                  {loc.address.split('\n').map((line, i) => (
-                    <span key={i}>{line}<br /></span>
-                  ))}
-                </address>
-                <a href={`tel:${loc.phone.replace(/\D/g,'')}`} className="location-card__phone">
+                <p className="location-card__address">{loc.address}</p>
+                <a href="tel:9208342823" className="location-card__phone">
                   📞 {loc.phone}
                 </a>
                 <p className="location-card__note">{loc.note}</p>
                 {loc.featured && (
-                  
-                    href={mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="location-card__map-btn"
-                  >
+                  <a href="https://maps.google.com/?q=N6765+County+Road+S+Oconto+WI+54153" className="location-card__map-btn">
                     Get Directions
                   </a>
                 )}
