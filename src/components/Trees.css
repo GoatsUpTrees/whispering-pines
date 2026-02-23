@@ -1,0 +1,227 @@
+.trees {
+  background: var(--cream-warm);
+  padding: 6rem 1.5rem;
+  position: relative;
+}
+
+.trees::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--pine), var(--amber), var(--pine));
+}
+
+.trees__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trees__header {
+  margin-bottom: 3.5rem;
+}
+
+.trees__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.tree-card {
+  background: var(--snow);
+  border: 1.5px solid rgba(26, 58, 42, 0.1);
+  border-radius: 16px;
+  padding: 2.2rem 1.8rem;
+  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s;
+  overflow: hidden;
+}
+
+.tree-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--card-color, var(--pine));
+}
+
+.tree-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(26, 58, 42, 0.12);
+}
+
+.tree-card--featured {
+  background: var(--pine);
+  border-color: var(--pine);
+}
+
+.tree-card--featured .tree-card__name,
+.tree-card--featured .tree-card__tagline,
+.tree-card--featured .tree-card__desc {
+  color: var(--cream);
+}
+
+.tree-card--featured .tree-card__traits li {
+  color: rgba(245, 237, 224, 0.8);
+}
+
+.tree-card--featured .tree-card__traits span {
+  color: var(--amber-light);
+}
+
+.tree-card__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--amber);
+  color: var(--snow);
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: 100px;
+}
+
+.tree-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tree-card__name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--pine);
+}
+
+.tree-card__tagline {
+  font-family: var(--font-accent);
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-top: 0.2rem;
+  margin-bottom: 0.9rem;
+}
+
+.tree-card__desc {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.tree-card__traits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tree-card__traits li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-accent);
+  font-size: 0.88rem;
+  color: var(--text-mid);
+}
+
+.tree-card__traits span {
+  color: var(--pine-light);
+  font-weight: 700;
+}
+
+.trees__services {
+  background: var(--pine);
+  border-radius: 20px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.trees__services .section-title { color: var(--cream); }
+.trees__services .section-label { color: var(--amber-light); }
+.trees__services .section-subtitle { color: rgba(245, 237, 224, 0.75); }
+
+.trees__services-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-pill {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--cream);
+  font-family: var(--font-accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.55rem 1.2rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.service-pill:hover {
+  background: rgba(255,255,255,0.17);
+}
+
+.extras__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.extra-card {
+  background: var(--snow);
+  border: 1.5px solid rgba(26, 58, 42, 0.1);
+  border-radius: 14px;
+  padding: 1.8rem 1.4rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.extra-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(26, 58, 42, 0.1);
+}
+
+.extra-card__icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.extra-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--pine);
+  margin-bottom: 0.4rem;
+}
+
+.extra-card p {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .trees__grid { grid-template-columns: 1fr 1fr; }
+  .extras__grid { grid-template-columns: 1fr 1fr; }
+  .trees__services { grid-template-columns: 1fr; }
+  .trees__services-icons { flex-direction: row; flex-wrap: wrap; }
+}
+
+@media (max-width: 600px) {
+  .trees__grid { grid-template-columns: 1fr; }
+  .extras__grid { grid-template-columns: 1fr 1fr; }
+  .trees { padding: 4rem 1.25rem; }
+}
